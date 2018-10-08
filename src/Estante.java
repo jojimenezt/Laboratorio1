@@ -10,7 +10,7 @@
  */
 
 public class Estante {
-
+    private boolean  tomado;
     private Producto[] productos;
 
     public Estante(Producto[] productos) {
@@ -41,5 +41,14 @@ public class Estante {
         }
         return false;
     }
+
+    public boolean isTomado() {
+        return tomado;
+    }
+
+    public void setTomado(boolean tomado) {
+        this.tomado = tomado;
+    }
+    
 }
 
