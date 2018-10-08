@@ -98,9 +98,9 @@ public class Bodega {
         for(Map.Entry<Integer,Integer> it:pedido.entrySet()){
             factura.addProducto(productos.get(it.getKey()), it.getValue());
             int cantidad=it.getValue();
-            ArrayList<Integer[]> bk=(ArrayList)productos.get(it.getKey()).getCajas().clone();
+            ArrayList<Integer[]> bk=(ArrayList)productos.get(it.getKey()).getEstantes().clone();
             while(cantidad!=0){
-                Integer[]e=productos.get(it.getKey()).getCajas().get(0);
+                Integer[]e=productos.get(it.getKey()).getEstantes().get(0);
                 if(!estantes[e[1]].isTomado()){
                     ingresar(empleados[robot++],e[1]);
                 }
