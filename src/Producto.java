@@ -57,7 +57,7 @@ public class Producto {
         this.cantidad = cantidad;
     }
     
-    public ArrayList<Integer[]> getCajas() {
+    public ArrayList<Integer[]> getEstantes() {
         return estantes;
     } 
 
