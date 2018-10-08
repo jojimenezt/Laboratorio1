@@ -12,7 +12,8 @@ import java.util.HashMap;
 
 public class Factura {
     private String cliente;
-    private  HashMap<Producto, Integer> productos;
+    private double precio;
+    private HashMap<Producto, Integer> productos;
     
     public Factura(String cliente){
         this.cliente= cliente;
@@ -24,7 +25,7 @@ public class Factura {
     }
 
     public boolean addProducto(Producto producto, int a) {
-        this.precio+=producto.getPrecioPU()*a;
+        this.precio+=producto.getPrecio()*a;
         return productos.put(producto,a)==null;
     }
     
