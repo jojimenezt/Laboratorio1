@@ -22,7 +22,7 @@ public class Bodega {
     private int robot=0;
     private ArrayList<Factura> facturas;
     
-    public Bodega(Estante[] estantes){
+    public Bodega(){
         this.almacen=new City(0, 0, 11, 14);
         for(int i=1;i<8;i++){
             Wall pared=new Wall(almacen,i,4,Direction.WEST);
@@ -50,18 +50,18 @@ public class Bodega {
         }
         Wall pared =new Wall(almacen,7,8,Direction.SOUTH);
         this.estantes=new Estante[20];
-        for (int i = 0; i < 10; i++) {
+        this.empleados=new Robot[8];
+        for (int i = 0; i < 8; i++) {
             this.empleados[i]=new Robot(almacen,8-i,2,Direction.EAST);
         }
         this.stand =new Thing[20];
         for (int i = 6; i>=0; i--) {
             if(i>0){
-            stand[6-i]=new Thing(almacen,i+1,4);
-            stand[6-i].getIcon().setLabel("Estante"+String.valueOf(7-i));
+                stand[6-i]=new Thing(almacen,i+1,4);
+                stand[6-i].getIcon().setLabel("Estante"+String.valueOf(7-i));
             }
             stand[13-i]=new Thing(almacen,1,11-i);
             stand[13-i].getIcon().setLabel("Estante"+String.valueOf(13-i));
-            
             stand[19-i]=new Thing(almacen,8-i,12);
             stand[19-i].getIcon().setLabel("Estante"+String.valueOf(20-i));
         }
@@ -137,11 +137,13 @@ public class Bodega {
             R.move();
         }  
     }
+    
     private void turn(Robot R,int c){
         for (int i = 0; i < c; i++) {
             R.turnLeft();
         }  
     }
+    
     private void comprobar(Robot R,int i, int c, boolean t){
         if(c==i){
                 turn(R,1);
@@ -153,6 +155,7 @@ public class Bodega {
                 turn(R,1);
             }
     }
+    
     private void recorrer(Robot R, int c,boolean t){
         for (int i = 0; i < 6; i++) {
             move(R,1);
@@ -173,6 +176,7 @@ public class Bodega {
         
         
     }
+    
     private void ingresar(Robot R,int c){
         estantes[c].setTomado(true);
         move(R,1);
@@ -223,7 +227,6 @@ public class Bodega {
             move(R,++robot);
             turn(R,3);
             move(R,1);
-            estantes[c].setTomado(false);
-            
+            estantes[c].setTomado(false);        
     }
 }
