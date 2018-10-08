@@ -9,9 +9,22 @@ Harvest a Field
 
 
 # wall
-   becker.robots.Wall 1 1 Direction.NORTH
-   becker.robots.Wall 1 2 Direction.NORTH
-   becker.robots.Wall 1 3 Direction.NORTH
+   becker.robots.Wall 1 4 Direction.WEST
+   becker.robots.Wall 1 3 Direction.EAST
+   becker.robots.Wall 2 4 Direction.WEST
+   becker.robots.Wall 2 3 Direction.EAST
+   becker.robots.Wall 3 4 Direction.WEST
+   becker.robots.Wall 3 3 Direction.EAST
+   becker.robots.Wall 4 4 Direction.WEST
+   becker.robots.Wall 4 3 Direction.EAST
+   becker.robots.Wall 5 4 Direction.WEST
+   becker.robots.Wall 5 3 Direction.EAST
+   becker.robots.Wall 6 4 Direction.WEST
+   becker.robots.Wall 6 3 Direction.EAST
+   becker.robots.Wall 7 4 Direction.WEST
+   becker.robots.Wall 7 3 Direction.EAST
+
+
    becker.robots.Wall 1 4 Direction.NORTH
    becker.robots.Wall 1 5 Direction.NORTH
    becker.robots.Wall 1 6 Direction.NORTH
